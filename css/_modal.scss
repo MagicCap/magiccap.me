@@ -14,6 +14,23 @@ aside#modal {
   overflow-x: hidden;
   transition: all 0.5s;
 
+  hr {
+      width: 50%;
+      margin: 16px auto;
+      border: none;
+      padding: 1px;
+      background-color: #eee;
+  }
+
+  a {
+    color: $accent1;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
   pre {
     white-space: pre-wrap;
   }
