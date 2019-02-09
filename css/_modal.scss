@@ -9,7 +9,7 @@ aside#modal {
   box-shadow: 2px 2px 16px #222;
   z-index: 9999;
   max-width: 50em;
-  max-height: 40vh;
+  max-height: 60vh;
   overflow-y: scroll;
   overflow-x: hidden;
   transition: all 0.5s;
@@ -38,12 +38,12 @@ aside#modal {
 
 aside#modal.hidden {
   opacity: 0;
-  top: -150vh;
+  top: -50vh;
 }
 
 aside#modal.shown {
   opacity: 1;
-  top: 25%;
+  top: 10%;
 }
 
 
