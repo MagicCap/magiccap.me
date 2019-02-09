@@ -1,0 +1,6 @@
+permalink: /:year/:title/
+
+sass:
+  sass_dir: css
+
+highlighter: rouge

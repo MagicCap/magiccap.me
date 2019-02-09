@@ -1,0 +1,40 @@
+<!-- Meta Tags -->
+<meta charset="utf-8">
+<!-- Sets the theme colour for mobile browsers (and vivaldi) -->
+<meta name="theme-color" content="#4a5798">
+<meta name="viewport" content="width=device-width, initial-scale=1.0 ">
+<!-- Not required, but useful to check when GH compiled the site. -->
+<meta name="generator" content="Jekyll {{ jekyll.version }}">
+<meta name="generated-at" content="{{ site.time | date: '%R %m/%d/%Y' }}">
+
+<meta name="author" content="{% if page.author %}{{ page.author }}{% else %}MagicCap Contributors{% endif %}">
+{% if page.description %}
+  <meta name="description" content="{{ page.description | escape }}">
+{% endif %}
+
+<!-- Open Graph Cards  -->
+<meta property="og:title" content="{{ page.title }}">
+{% if page.description %}
+  <meta property="og:description" content="{{ page.description | escape }}">
+{% endif %}
+<meta property="og:image" content="{% if page.image %}{{ page.image }}{% else %}/img/logo.png{% endif %}">
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="{% if page.image %}summary_large_image{% else %}summary{% endif %}">
+<meta name="twitter:site" content="{% if page.authortwitter %}@{{ page.authortwitter }}{% else %}@magiccapapp{% endif %}">
+<meta name="twitter:title" content="{{ page.title }}">
+{% if page.description %}
+  <meta name="twitter:description" content="{{ page.description | escape }}">
+{% endif %}
+<meta name="twitter:image" content="{% if page.image %}{{ page.image }}{% else %}/img/logo.png{% endif %}">
+<meta name="twitter:dnt" content="on">
+
+<!-- Page title -->
+<title>{% if page.title and page.permalink != '/' %}{{ page.title }} | {% endif %}MagicCap</title>
+
+<!-- CSS and stuff -->
+<link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+<link href="/css/combined.css" rel="stylesheet">
+
+<link href="/img/favicon.png" rel="shortcut icon" type="image/png">

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  {% include head.html %}
+</head>
+
+<body>
+  <aside id="modal-cover" class="hidden" onclick="closeModal()"><p>click anywhere to close</p></aside>
+  <aside id="modal" class="hidden">
+    <div id="modal-text">
+    </div>
+  </aside>
+
+  <nav>
+    {% include menu.html %}
+  </nav>
+
+  <!-- Use the home hero if we're on the homepage, else use the default -->
+  {% if page.url == '/' %}
+    {% include home-hero.html %}
+  {% else %}
+    {% include hero.html %}
+  {% endif %}
+
+
+  <main>
+    {{ content }}
+  </main>
+
+  <footer>
+    {% include footer.html %}
+  </footer>
+</body>
+
+</html>
