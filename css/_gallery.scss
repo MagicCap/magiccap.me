@@ -1,0 +1,11 @@
+div.gallery {
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+
+  img {
+    height: 25vh;
+    margin-right: 8px;
+  }
+}
