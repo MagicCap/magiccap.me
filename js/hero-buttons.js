@@ -6,6 +6,8 @@ if (plat) {
     os = 'mac';
   } else if (plat.includes('linux')) {
     os = 'linux';
+  } else if (plat.includes('win')) {
+    os = 'win';
   }
 
   if (os !== undefined) {
@@ -24,4 +26,11 @@ function showBoth() {
 
 function showBeta() {
   document.getElementById('buttBeta').style.display = 'inline-block';
+}
+
+if(os == 'win') {
+  doModal(`
+      <h2><i class="fab fa-windows"></i> Using Windows?</h2>
+      <p>MagicCap is a capture suite for macOS and Linux only. On Windows, we recommend the similar FOSS project, <a href="https://getsharex.com/">ShareX</a>.</p>
+    `);
 }
