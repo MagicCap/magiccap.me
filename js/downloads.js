@@ -50,7 +50,7 @@ $.getJSON('https://api.magiccap.me/version/latest', function(json) {
   Bchangelog = beta['changelogs'];
 
   betaStr = `
-    <h2>Latest Beta Version: ${BvNum}</h2>
+    <h2>Latest Beta Version: <span style="font-weight: normal;">${BvNum}</span></h2>
     <p>Download for: <a href=\"${BmDwn}\">macOS</a> &bull; <a href="${BlDwn}">Linux</a></p>
     <pre>${Bchangelog}</pre>
 
