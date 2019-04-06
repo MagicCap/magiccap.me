@@ -1,0 +1,56 @@
+ul.features {
+  list-style-type: none;
+  padding: 0;
+  columns: 2;
+
+  li {
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 16px;
+    padding: 8px 8px 8px 4em;
+    font-size: 0.9em;
+    background-color: #fff;
+    border-radius: 4px;
+
+    b {
+      font-family: $fn-head;
+      display: block;
+      font-weight: bolder;
+      font-size: 1.3em;
+    }
+
+    span.icon {
+      position: absolute;
+      left: 8px;
+      top: 0;
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    .fa-fw {
+      color: $accent1;
+      font-size: 2.2em;
+      filter: brightness(0.8);
+    }
+  }
+
+
+  li:nth-child(odd) {
+    border: 1px solid #005;
+    box-shadow: 0px 0px 8px 2px #{$accent1}55;
+
+    .fa-fw {
+      color: $accent1;
+    }
+  }
+
+  li:nth-child(even) {
+    border: 1px solid #500;
+    box-shadow: 0px 0px 8px 2px #{$accent2}55;
+
+    .fa-fw {
+      color: $accent2;
+    }
+  }
+}
