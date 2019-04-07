@@ -1,7 +1,10 @@
 ul.features {
   list-style-type: none;
   padding: 0;
+  padding-bottom: 8px;
   columns: 2;
+  overflow-x: hidden;
+  overflow-y: visible;
 
   li {
     overflow: hidden;
