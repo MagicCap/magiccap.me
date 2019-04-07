@@ -22,6 +22,7 @@ if (plat) {
 function showBoth() {
   document.getElementById('buttMac').style.display = 'inline-block';
   document.getElementById('buttLinux').style.display = 'inline-block';
+  document.getElementById('notOS').remove();
 }
 
 function showBeta() {
