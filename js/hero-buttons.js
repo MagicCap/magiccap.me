@@ -15,6 +15,8 @@ if (plat) {
       document.getElementById('buttMac').style.display = 'none';
     } else if (os == 'mac') {
       document.getElementById('buttLinux').style.display = 'none';
+    } else {
+      document.getElementById('notOS').style.display = 'none';
     }
   }
 }
