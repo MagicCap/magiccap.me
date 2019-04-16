@@ -36,7 +36,7 @@ if(os == 'win') {
       <h2><i class="fab fa-windows"></i> Using Windows?</h2>
       <p>
         MagicCap is a capture suite for macOS and Linux only.<br>
-        For Windows, we recommend the similar FOSS project, <a href="https://getsharex.com/">ShareX</a>. You may also wish to check out the <a href="javascript:alert('todo')">AlternativeTo page</a> for other options.
+        For Windows, we recommend the similar FOSS project, <a href="https://getsharex.com/">ShareX</a>. You may also wish to check out the <a href="https://alternativeto.net/software/magiccap/">AlternativeTo page</a> for other options.
       </p>
     `);
 }
