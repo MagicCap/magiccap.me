@@ -1,9 +1,13 @@
 div#carbonads {
-  padding-top: 1.5em;
   max-width: 50em;
-  margin: 0 auto;
+  margin: 3em auto -1.5em;
   text-align: left;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
 
   span.carbon-wrap {
     display: flex;
@@ -14,8 +18,11 @@ div#carbonads {
     border-radius: 4px;
   }
 
-  a.carbon-img img {
-    max-height: 7em;
+  a.carbon-img {
+    img {
+      max-height: 7em;
+      margin-right: 8px;
+    }
   }
 
   a.carbon-text {
