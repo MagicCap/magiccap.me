@@ -13,8 +13,7 @@ div#carbonads {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #fff9;
-    border: 2px solid $accent2;
+    background-color: #fffa;
     border-radius: 4px;
   }
 
@@ -37,8 +36,8 @@ div#carbonads {
 
   a.carbon-poweredby {
     position: relative;
-    top: -1.2em;
-    left: -0.2em;
+    top: -1.3em;
+    left: -0.3em;
     float: right;
     color: $accent2;
     text-decoration: none;
@@ -47,6 +46,7 @@ div#carbonads {
 
     &:hover {
       opacity: 1;
+      text-decoration: underline;
     }
   }
 }
