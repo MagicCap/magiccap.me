@@ -1,5 +1,5 @@
-#carbonads {
-  margin-top: 2em;
+div#carbonads {
+  padding-top: 1.5em;
   max-width: 50em;
   margin: 0 auto;
   text-align: left;
@@ -7,23 +7,39 @@
 
   span.carbon-wrap {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff9;
+    border: 2px solid $accent2;
+    border-radius: 4px;
   }
 
-  a.carbon-img {
-    max-height: 15em;
+  a.carbon-img img {
+    max-height: 7em;
   }
 
   a.carbon-text {
-    font-size: 1.3em;
+    font-size: 1.5em;
     color: $accent1;
     text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   a.carbon-poweredby {
+    position: relative;
+    top: -1.2em;
+    left: -0.2em;
     float: right;
     color: $accent2;
     text-decoration: none;
     font-style: italic;
+    opacity: 0.5;
+
+    &:hover {
+      opacity: 1;
+    }
   }
 }
