@@ -4,8 +4,6 @@ aside.hero {
   text-align: center;
   background-color: $accent1;
   background: linear-gradient(135deg, $accent1 0%,$accent2 100%);
-  color: #ddd;
-  box-shadow: 0px 2px 8px #000;
 
   img {
     height: 156px;
@@ -28,7 +26,6 @@ aside.hero {
       color: #eee;
       text-decoration: none;
       background-color: $accent1;
-      border: 1px solid $accent2;
       padding: 8px;
       border-radius: 4px;
       box-shadow: 0px 4px 2px #1115;
@@ -64,8 +61,8 @@ aside.hero {
       margin: 4px 0;
       padding: 0;
       font-size: 0.5em;
-      color: #555;
-      opacity: 0.4;
+      color: #fff;
+      opacity: 0.6;
       transition: opacity 0.2s;
 
       &:hover {
@@ -73,7 +70,7 @@ aside.hero {
       }
 
       a {
-        color: #333;
+        color: #fff;
         text-decoration: none;
 
         &:hover {
