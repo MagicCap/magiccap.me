@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: #252525;
+  background: $dark2;
   color: #fff;
   font-family: $fn-body;
 }
@@ -23,7 +23,7 @@ main {
   padding: 16px;
   border-radius: 4px;
   box-shadow: 0 0 3px 0 #000000;
-  background-color: #161616;
+  background-color: $dark1;
 
   a {
     color: $accent1;
