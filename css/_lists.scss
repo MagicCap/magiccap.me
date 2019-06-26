@@ -12,8 +12,10 @@ ul.features {
     margin-bottom: 16px;
     padding: 8px 8px 8px 4em;
     font-size: 0.9em;
-    background-color: #fff;
-    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.25);
+    color: rgba(255, 255, 255, 0.85);
+    border-radius: .5px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
     break-inside: avoid;
 
     b {
@@ -41,8 +43,6 @@ ul.features {
 
 
   li:nth-child(odd) {
-    border: 1px solid #005;
-    box-shadow: 0px 0px 8px 2px #{$accent1}55;
 
     .fa-fw {
       color: $accent1;
@@ -50,8 +50,6 @@ ul.features {
   }
 
   li:nth-child(even) {
-    border: 1px solid #500;
-    box-shadow: 0px 0px 8px 2px #{$accent2}55;
 
     .fa-fw {
       color: $accent2;
