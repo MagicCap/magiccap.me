@@ -1,10 +1,8 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #efefef;
-  background-image: url('/img/patterns/funky-lines.png');
-  background-repeat: repeat;
-  color: #333;
+  background: #252525;
+  color: #fff;
   font-family: $fn-body;
 }
 
@@ -24,8 +22,8 @@ main {
   margin: 48px auto;
   padding: 16px;
   border-radius: 4px;
-  box-shadow: 0px 2px 4px #{$accent1}22;
-  background-color: #fffd;
+  box-shadow: 0 0 3px 0 #000000;
+  background-color: #161616;
 
   a {
     color: $accent1;
