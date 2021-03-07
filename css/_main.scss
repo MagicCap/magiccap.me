@@ -2,6 +2,8 @@ body {
   margin: 0;
   padding: 0;
   background: $dark2;
+  background-image: url('/img/subtlepatterns-qbkls.png');
+  background-repeat: repeat;
   color: #fff;
   font-family: $fn-body;
 }
@@ -19,7 +21,7 @@ h4 {
 
 main {
   max-width: 80em;
-  margin: 88px auto 48px auto;
+  margin: 60px auto;
   padding: 16px;
   border-radius: 4px;
   box-shadow: 0 0 3px 0 #000000;
@@ -56,8 +58,11 @@ main {
 }
 
 footer {
-  margin: 8px 0;
+  margin-top: 8px;
+  padding: 24px 0;
   text-align: center;
+  background-color: $dark1;
+  border-top: 4px solid $accent2;
 
   a {
     color: $accent1;
@@ -70,12 +75,13 @@ footer {
 
   p {
     margin: 0;
+    margin-top: 8px;
   }
 
   div#socials {
     a {
       font-size: 2em;
-      margin: 0 8px;
+      margin: 0 16px;
       transition: opacity 0.2s;
     }
 

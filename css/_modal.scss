@@ -3,8 +3,8 @@ aside#modal {
   left: 50%;
   transform: translateX(-50%);
   background-color: $dark1;
-  padding: 8px;
-  border-radius: 4px;
+  padding: 24px;
+  border-radius: 8px;
   border: 2px solid $accent2;
   box-shadow: 2px 2px 16px #222;
   z-index: 9999;
@@ -58,8 +58,9 @@ aside#modal-cover {
   transition: all 0.5s;
 
   p {
+    font-size: 1.2em;
     position: fixed;
-    bottom: 8px;
+    bottom: 5%;
     left: 50%;
     transform: translateX(-50%);
     color: #fffa;

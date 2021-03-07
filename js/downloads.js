@@ -1,62 +1,56 @@
-let stable;
-let vNum;
-let lDwn;
-let mDwn;
-let changelog;
-let stabStr;
+let stableModalString, betaModalString = 'There was an error fetching the latest versions, check the <a href="https://github.com/magiccap">GitHub page</a> for the latest releases.';
 
-let beta;
-let BvNum;
-let BlDwn;
-let BmDwn;
-let Bchangelog;
-let betaStr;
+async function getVersionInfo() {
+  await fetch(`https://api.magiccap.me/version/latest`).then(resp => {
+    if(resp) {
+      resp.json().then(json => {
+            for(e of document.getElementsByClassName('latest-v')) {
+              e.innerHTML = json['release']['version'];
+            }
+            
+            for(e of document.getElementsByClassName('macDwn')) {
+              e.href = json['release']['mac'];
+            }
+            
+            for(e of document.getElementsByClassName('linuxDwn')) {
+              e.href = json['release']['linux'];
+            }
 
-$.getJSON('https://api.magiccap.me/version/latest', function(json) {
-  stable = json['release'];
-  vNum = stable['version'];
-  lDwn = stable['linux'];
-  mDwn = stable['mac'];
-  changelog = stable['changelogs'];
+            stableModalString = `
+              <h2>Changelogs for ${json['release']['version']}</h2>
+              <pre>${json['release']['changelogs']}</pre>
 
-  for(e of document.getElementsByClassName('latest-v')) {
-    e.innerHTML = vNum;
-  }
+              <hr>
 
-  for(e of document.getElementsByClassName('macDwn')) {
-    e.href = mDwn;
-  }
-
-  for(e of document.getElementsByClassName('linuxDwn')) {
-    e.href = lDwn;
-  }
-
-  stabStr = `
-    <h2>Changelogs for ${vNum}</h2>
-    <pre>${changelog}</pre>
-
-    <hr>
-
-    <h3>Previous Versions</h3>
-    <p>Download previous versions from <a href="https://github.com/MagicCap/MagicCap/releases">GitHub</a></p>
-  `;
+              <h3>Previous Versions</h3>
+              <p>Download previous versions from <a href="https://github.com/MagicCap/MagicCap/releases">GitHub</a></p>
+            `;
 
 
+            betaModalString = `
+              <h2>Latest Beta Version: <span style="font-weight: normal;">${json['beta']['version']}</span></h2>
+              <p>Download for: <a href=\"${json['beta']['mac']}\">macOS</a> &bull; <a href="${json['beta']['linux']}">Linux</a></p>
+              <pre>${json['beta']['changelogs']}</pre>
 
-  beta = json['beta'];
-  BvNum = beta['version'];
-  BlDwn = beta['linux'];
-  BmDwn = beta['mac'];
-  Bchangelog = beta['changelogs'];
+              <hr>
+              <h3>Previous Versions</h3>
+              <p>Download previous versions from <a href="https://github.com/MagicCap/MagicCap/releases">GitHub</a></p>
+            `;
+      });
+    } else {
+      for(e of document.getElementsByClassName('latest-v')) {
+        e.innerHTML = 'error getting the latest version';
+      }
+      
+      for(e of document.getElementsByClassName('macDwn')) {
+        e.href = `javascript:doModal(stableModalString);`;
+      }
+      
+      for(e of document.getElementsByClassName('linuxDwn')) {
+        e.href = `javascript:doModal(stableModalString);`;
+      }
+    }
+  });
+}
 
-  betaStr = `
-    <h2>Latest Beta Version: <span style="font-weight: normal;">${BvNum}</span></h2>
-    <p>Download for: <a href=\"${BmDwn}\">macOS</a> &bull; <a href="${BlDwn}">Linux</a></p>
-    <pre>${Bchangelog}</pre>
-
-    <hr>
-    <h3>Previous Versions</h3>
-    <p>Download previous versions from <a href="https://github.com/MagicCap/MagicCap/releases">GitHub</a></p>
-  `;
-
-});
+getVersionInfo();
